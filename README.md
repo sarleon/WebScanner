@@ -23,4 +23,3 @@ git clone https://github.com/sarleon/WebScanner.git
 pip install -r requirements.txt
 
 ```
-
