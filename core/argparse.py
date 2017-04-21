@@ -1,4 +1,5 @@
 import optparse
+from config import config
 
 def parse_argument():
     '''

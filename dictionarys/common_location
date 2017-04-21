@@ -1,0 +1,31 @@
+robots.txt
+
+# index file  
+.index.php.swp
+index.php.bak
+index.rar
+index.zip
+index.tar.gz
+index.tar.xz
+index.txt
+
+
+
+# info file
+.viminfo
+
+
+# version control
+.git
+.svn
+.gitignore
+
+
+# deployment and distribution
+.travis.yml
+
+
+
+# Apple work dir
+.DS_Store
+__MACOSX

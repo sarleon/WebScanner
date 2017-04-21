@@ -26,5 +26,6 @@ class Printer:
     def println_fail(self, content):
         self._output(self.FAIL + content + self.LINEBREAK_CHAR)
 
+printer = Printer()
 
 

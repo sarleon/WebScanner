@@ -1,11 +1,20 @@
 import os
 
+
+
+
 class Config:
 
-    web_root=''
+
+    THREAD_NUM=20
+    WEB_ROOT= ''
+    target_list=[]
+    cookies = {}
+    headers = None
     verbose = False
-    project_dir = os.path.dirname(os.path.abspath(__file__))
-    dictionary_dir='dictionarys'
+    PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+    DICTIONARY_DIR= 'dictionarys'
+    NO_PRINT = False
 
 
 
@@ -16,3 +25,6 @@ class DevelopmentConfig(Config):
 
 class ProductionConfig(Config):
     pass
+
+
+config=Config()
