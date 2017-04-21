@@ -1,6 +1,7 @@
 import requests
 import threadpool
 from config import config
+from multiprocessing.pool import ThreadPool
 from util.printer import  printer
 
 class Spider:
@@ -13,26 +14,31 @@ class Spider:
         default_headers={
             'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36'
         }
-        headers = config.headers or default_headers
-        cookies = config.cookies
+        config.headers = config.headers or default_headers
 
-        web_root = config.web_root
-        if web_root.strip()[-1] != '/':
-            web_root=web_root.strip()+'/'
+        if config.web_root.strip()[-1] != '/':
+            config.web_root=config.web_root.strip()+'/'
 
         task_list = config.target_list
-        results = {}
 
-        pool = threadpool.ThreadPool(config.THREAD_NUM)
-        # reqs = pool.
+
+        pool = ThreadPool(config.THREAD_NUM)
+        res = pool.map(self.crab,task_list)
+        results = dict(zip(task_list,res))
+        return results
 
     @staticmethod
-    def crab(web_root,path,headers,cookies):
-        url = web_root + path
-        resp = requests.get(url=url,headers=headers,cookies=cookies)
+    def crab(path):
+        url = config.web_root + path
+        resp = requests.get(url=url,headers=config.headers,cookies=config.cookies)
 
         if not config.NO_PRINT:
-            prine
+            printer.print_crab(path,resp.status_code)
+
+        if resp.status_code == 404:
+            return False
+        else:
+            return  True
 
 
 

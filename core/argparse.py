@@ -13,9 +13,10 @@ def parse_argument():
         search_register.py -e [email] [options]
         search_register.py -c [cellphone] [options]"""
 
-    option_parser.add_option('-e', '--email', dest='email', action='store', default=None)
-    option_parser.add_option('-c', '--cellphone', dest='cellphone', action='store', default=None)
-    option_parser.add_option('-t', '--thread', dest='thread', action='store', default=1, help="")
+    option_parser.add_option('-u', '--url', dest='url', action='store', default=None)
+    option_parser.add_option('-d', '--dictionary', dest='thread', action='store', default=None, help="")
+    option_parser.add_option('-l', '--list-dictionary', dest='thread', action='store', default=1, help="")
+    option_parser.add_option('-t', '--threads', dest='threads', action='store', type='int',default=1, help="")
 
     """
     parse options
