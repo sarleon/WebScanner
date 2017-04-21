@@ -53,10 +53,12 @@ class Printer:
             STATUS_COLOR = self.WARNING
 
         status = self.STATUS_MAP.get(status_code) or ''
-        if  not config.verbose and status_code !=404:
-            status_code = str(status_code)
-
-            self._output(self.HEADER+path+STATUS_COLOR+'['+status_code+']'+status )
+        status_code = str(status_code)
+        if config.verbose:
+            self._output(self.HEADER+path+STATUS_COLOR+'['+status_code+']'+status +self.LINEBREAK_CHAR)
+        else:
+            if status_code!='404':
+                self._output(self.HEADER + path + STATUS_COLOR + '[' + status_code + ']' + status + self.LINEBREAK_CHAR)
 
 
 printer = Printer()

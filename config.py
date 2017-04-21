@@ -15,7 +15,8 @@ class Config:
     PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
     DICTIONARY_DIR= 'dictionarys'
     NO_PRINT = False
-
+    dictionary= []
+    DIR_SEPERATOR='/'
 
 
 

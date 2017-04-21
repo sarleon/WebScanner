@@ -6,22 +6,31 @@ from util.printer import  printer
 
 class Spider:
 
-    WEB_ROOT=config.web_root
+    WEB_ROOT=config.WEB_ROOT
 
 
 
-    def work(self,path):
+
+    def work(self):
         default_headers={
             'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36'
         }
         config.headers = config.headers or default_headers
 
-        if config.web_root.strip()[-1] != '/':
-            config.web_root=config.web_root.strip()+'/'
 
+        """
+        add slash (dir seperator) to the url
+        """
+        if config.WEB_ROOT.strip()[-1] != '/':
+            config.WEB_ROOT=config.WEB_ROOT.strip()+'/'
+        else:
+            config.WEB_ROOT = config.WEB_ROOT.strip()
         task_list = config.target_list
 
 
+        """
+        do the crab work
+        """
         pool = ThreadPool(config.THREAD_NUM)
         res = pool.map(self.crab,task_list)
         results = dict(zip(task_list,res))
@@ -29,7 +38,7 @@ class Spider:
 
     @staticmethod
     def crab(path):
-        url = config.web_root + path
+        url = config.WEB_ROOT + path
         resp = requests.get(url=url,headers=config.headers,cookies=config.cookies)
 
         if not config.NO_PRINT:
