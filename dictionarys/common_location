@@ -29,3 +29,10 @@ index.txt
 # Apple work dir
 .DS_Store
 __MACOSX
+
+
+# user and auth control page
+admin.php
+login.php
+register.php
+
