@@ -1,5 +1,6 @@
 robots.txt
 
+
 # index file  
 .index.php.swp
 index.php.bak
@@ -8,7 +9,7 @@ index.zip
 index.tar.gz
 index.tar.xz
 index.txt
-
+~index.php
 
 
 # info file
@@ -29,6 +30,7 @@ _viminfo
 
 # Apple work dir
 .DS_Store
+.ds_store
 __MACOSX
 
 
@@ -91,3 +93,17 @@ WEB-INF/database.propertie
 .bash_profile
 .profile
 .zshrc
+.env
+
+
+# php config
+Homestead.json
+Homestead.yaml
+npm-debug.log
+composer.xml
+composer.yaml
+package.json
+_config.xml
+_config.yml
+_config.yaml
+
