@@ -13,6 +13,7 @@ index.txt
 
 # info file
 .viminfo
+_viminfo
 
 
 # version control
@@ -40,3 +41,53 @@ admin
 login
 register
 
+
+#phpinfo
+phpinfo.php
+
+
+#possible archive
+www.zip
+www.rar
+www.zip
+www.7z
+www.tar.gz
+www.tar
+web.zip
+web.rar
+web.zip
+web.7z
+web.tar.gz
+web.tar
+
+
+#readme
+README.MD
+README.md
+README
+readme
+readme.md
+readme.MD
+
+
+#j2ee
+WEB-INF/web.xml
+WEB-INF/src/
+WEB-INF/classes
+WEB-INF/lib
+WEB-INF/database.propertie
+
+
+# jetbrain config
+.idea/
+.idea/workspace.xml
+.idea/misc.xml
+.idea/vcs.xml
+
+
+# shell config
+.bash_history
+.bashrc
+.bash_profile
+.profile
+.zshrc

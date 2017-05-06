@@ -7,7 +7,7 @@ def main():
     spider = Spider()
     parse_dict()
     spider.work()
-
+    
 
 if __name__ == '__main__':
     main()
