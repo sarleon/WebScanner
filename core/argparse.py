@@ -16,7 +16,7 @@ def parse_argument():
     option_parser.add_option('-u', '--url', dest='url', action='store', default=None)
     option_parser.add_option('-d', '--dictionary', dest='dictionary', action='store', default=None, help="list of dictionary name use comma to seperate")
     option_parser.add_option('-l', '--list-dictionary', dest='list', action='store', default=1, help="")
-    option_parser.add_option('-t', '--threads', dest='threads', action='store', type='int',default=10, help="")
+    option_parser.add_option('-t', '--threads', dest='threads', action='store', type='int',default=100, help="")
     option_parser.add_option('-v','--verbose',dest='verbose',action='store_true',help='output all the infomation')
 
     """
