@@ -109,3 +109,7 @@ _config.xml
 _config.yml
 _config.yaml
 
+#upload
+upload/
+uploads/
+upload.php
