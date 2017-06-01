@@ -34,7 +34,7 @@ _viminfo
 .DS_Store
 .ds_store
 __MACOSX
-
+.DS_STORE
 
 # user and auth control page
 admin.php
