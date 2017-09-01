@@ -1,11 +1,16 @@
 robots.txt
 
+swap
+backup
+comment
 
 # index file  
 .index.php.swp
 index.php.bak
+index.php.txt
 index.rar
 index.zip
+index.phps
 index.tar.gz
 index.tar.xz
 index.txt
@@ -63,6 +68,10 @@ web.zip
 web.7z
 web.tar.gz
 web.tar
+webroot.zip
+webroot.rar
+wwwroot.zip
+wwwroot.rar
 
 
 #readme

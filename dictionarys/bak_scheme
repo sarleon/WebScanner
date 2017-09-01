@@ -1,0 +1,14 @@
+{{name}}.phps
+{{name}}.php.bak
+{{name}}.php.txt
+{{name}}.txt
+.{{name}}.php.swp
+.{{name}}.php~
+{{name}}.php~
+~{{name}}.php
+{{name}}.zip
+{{name}}.rar
+{{name}}.7z
+{{name}}.tar.gz
+{{name}}.tar.bz2
+{{name}}.7z
