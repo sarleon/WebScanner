@@ -39,7 +39,7 @@ class Spider:
     @staticmethod
     def crab(path):
         url = config.WEB_ROOT + path
-        resp = requests.get(url=url,headers=config.headers,cookies=config.cookies)
+        resp = requests.get(url=url,headers=config.headers,cookies=config.cookies,verify=False)
 
         if not config.NO_PRINT:
             printer.print_crab(path,resp.status_code)

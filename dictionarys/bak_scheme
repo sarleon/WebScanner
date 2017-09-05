@@ -12,3 +12,4 @@
 {{name}}.tar.gz
 {{name}}.tar.bz2
 {{name}}.7z
+%23{{name}}.php%23
