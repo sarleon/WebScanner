@@ -122,3 +122,12 @@ _config.yaml
 upload/
 uploads/
 upload.php
+
+# python
+app.py
+app.pyc
+manage.pyc
+
+# nodejs
+app.js
+app.jsx

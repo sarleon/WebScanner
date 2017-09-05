@@ -1,7 +1,6 @@
 
 admin/
 login/
-admin_login/
 dev/policy/
 admin/
 manage/
@@ -17,4 +16,5 @@ admin-login/
 admin_login/
 img/
 image/
-
+__pycache__/
+node_modules/
