@@ -132,3 +132,12 @@ manage.pyc
 app.js
 app.jsx
 
+# sqlite
+database.sqlite
+database.sqlite3
+db.sqlite
+db.sqlite3
+dev.sqlite
+dev.sqlite3
+prod.sqlite
+prod.sqlite3

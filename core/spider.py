@@ -1,5 +1,4 @@
 import requests
-import threadpool
 from config import config
 from multiprocessing.pool import ThreadPool
 from util.printer import  printer
@@ -42,7 +41,7 @@ class Spider:
         resp = requests.get(url=url,headers=config.headers,cookies=config.cookies,verify=False)
 
         if not config.NO_PRINT:
-            printer.print_crab(path,resp.status_code)
+            printer.print_crab(path+" [Size]:"+str(len(resp.text)),resp.status_code)
 
         if resp.status_code == 404:
             return False
