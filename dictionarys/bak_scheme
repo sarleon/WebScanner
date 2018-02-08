@@ -17,3 +17,6 @@
 {{name}}.pyc
 {{name}}.js
 {{name}}.jsx
+{{name}}.aspx
+{{name}}.asp
+{{name}}.ashx

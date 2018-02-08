@@ -120,9 +120,11 @@ _config.yaml
 
 #upload
 upload/
+uploaded
 uploads/
 upload.php
-
+include
+included
 # python
 app.py
 app.pyc
@@ -141,3 +143,9 @@ dev.sqlite
 dev.sqlite3
 prod.sqlite
 prod.sqlite3
+
+# sitemap
+sitemap
+sitemap.xml
+map
+
