@@ -1,3 +1,4 @@
+from config import config
 def parse_robots_txt(content):
     location = set()
     lines = content.split('\n')
@@ -9,6 +10,19 @@ def parse_robots_txt(content):
                 location.add(loc)
 
     return  list(location)
+
+def filter_postfix(name):
+    if name[-4:]==".php" or name[-4:]==".jsp" or name[-4:]==".asp" or name[-4:]=="aspx"  or name[-4:]=="phps" :
+        return name[:name.rfind('.')]
+    else:
+        return name
+
+
+def parse_res(location):
+    lines = open(config.PROJECT_DIR + config.DIR_SEPERATOR + config.DICTIONARY_DIR + config.DIR_SEPERATOR + config.LOC_SCHEME, 'r').readlines()
+    location = filter_postfix(location)
+    result_lines = map(lambda x:x.replace("{{name}}",location),lines)
+    return result_lines
 
 
 """ test code:::

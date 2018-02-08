@@ -11,10 +11,11 @@
 {{name}}.7z
 {{name}}.tar.gz
 {{name}}.tar.bz2
-{{name}}.7z
 %23{{name}}.php%23
 {{name}}.py
 {{name}}.pyc
+{{name}}.cpython-35.pyc
+{{name}}.cpython-34.pyc
 {{name}}.js
 {{name}}.jsx
 {{name}}.aspx

@@ -14,6 +14,7 @@ class Config:
     verbose = False
     PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
     DICTIONARY_DIR= 'dictionarys'
+    LOC_SCHEME = 'loc_scheme'
     NO_PRINT = False
     dictionary= []
     DIR_SEPERATOR='/'

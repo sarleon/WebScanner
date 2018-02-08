@@ -2,8 +2,7 @@ import requests
 from config import config
 from multiprocessing.pool import ThreadPool
 from util.printer import  printer
-from util.content import  parse_robots_txt
-
+from util.content import  parse_robots_txt,parse_res
 class Spider:
 
     WEB_ROOT=config.WEB_ROOT
@@ -21,8 +20,8 @@ class Spider:
         """
         add slash (dir seperator) to the url
         """
-        if config.WEB_ROOT.strip()[-1] != '/':
-            config.WEB_ROOT=config.WEB_ROOT.strip()+'/'
+        if config.WEB_ROOT.strip()[-1] != config.DIR_SEPERATOR:
+            config.WEB_ROOT=config.WEB_ROOT.strip()+config.DIR_SEPERATOR
         else:
             config.WEB_ROOT = config.WEB_ROOT.strip()
         task_list = config.target_list
@@ -41,8 +40,14 @@ class Spider:
         do the first time  crab work
         """
         pool = ThreadPool(config.THREAD_NUM)
-        res = pool.map_async(self.crab,task_list)
-        results = dict(zip(task_list,res))
+        res = pool.map(self.crab,task_list)
+        res = filter(lambda x:x!=False,res)
+        for i in map(parse_res,list(res)):
+            second_list+=i
+
+        res2 = pool.map(self.crab, second_list)
+        results = dict(zip(task_list,res+res2))
+
         return results
 
     @staticmethod
@@ -61,7 +66,7 @@ class Spider:
             if ret == "content":
                 return resp.content
             else:
-                return  True
+                return  path
 
 
 
