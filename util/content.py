@@ -1,5 +1,7 @@
 from config import config
 def parse_robots_txt(content):
+    if not content:
+        return []
     location = set()
     lines = content.split('\n')
     for line in lines:
