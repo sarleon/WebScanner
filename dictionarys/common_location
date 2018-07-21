@@ -5,6 +5,7 @@ backup
 comment
 
 # index file  
+index.php
 .index.php.swp
 index.php.bak
 index.php.txt
