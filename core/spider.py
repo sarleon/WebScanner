@@ -3,6 +3,10 @@ from config import config
 from multiprocessing.pool import ThreadPool
 from util.printer import  printer
 from util.content import  parse_robots_txt,parse_res
+import urllib3
+urllib3.disable_warnings()
+requests.packages.urllib3.disable_warnings()
+
 class Spider:
 
     WEB_ROOT=config.WEB_ROOT
