@@ -18,3 +18,6 @@ img/
 image/
 __pycache__/
 node_modules/
+phpmyadmin/
+phpMyAdmin/
+PHPMyAdmin/
